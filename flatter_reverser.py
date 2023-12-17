@@ -1,3 +1,5 @@
+#patika.dev python dersleri icin verilmis projedeki problemlerin cozumu. 
+
 def flatter(lst):
   flatted_l = []
   for sublist in lst:
@@ -15,3 +17,20 @@ print(flatter(sample_l))
 # eger girdigimiz alt liste bir elemansa dogrudan flat listemize ekledik 
 # eger bir eleman degilse , alt listenin tekrardan flatter() fonksiyonuna girmis halini extend() metodu ile ekledik
 # ve sonucu flatted_l listesi ile return ettik 
+
+def reverser(lst):
+  lst.reverse() 
+  for i in range(len(lst)):
+    if isinstance(lst[i],list):
+      lst[i].reverse()
+    else:
+      pass
+  return lst 
+
+
+sample_list = [[1, 2], [3, 4], [5, 6, 7]]
+print(reverser(sample_list))
+
+#bu fonksiyonda reverse() ve isinstance() metodunu kullandik. her once ana listemizi tersine cevirip alt listeleri icinde gezdik 
+#ve onlarida tersine cevirdik 
+
